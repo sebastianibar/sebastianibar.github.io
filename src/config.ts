@@ -44,8 +44,7 @@ export const siteConfig = {
       name: "API REST de Biblioteca",
       description:
         "Aplicación web para registrar, consultar, editar y eliminar autores y libros. Backend en Flask con SQLite (dos tablas relacionadas) y frontend en HTML, CSS y JavaScript que consume la API con fetch.",
-      link: "https://github.com/sebastianibar/api-rest-biblioteca
-        ",
+      link: "https://github.com/sebastianibar/api-rest-biblioteca",
       skills: ["Python", "Flask", "SQLite", "JavaScript"],
     },
     {
