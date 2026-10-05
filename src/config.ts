@@ -30,35 +30,36 @@ export const siteConfig = {
       name: "Sistema de Votación en Línea (simulación)",
       description:
         "Simulación de votación para candidatos a rectoría de la UNISON. Valida el expediente de 9 dígitos, evita el voto duplicado y muestra los resultados en una gráfica de dona que se actualiza cada 30 segundos. Proyecto en equipo.",
-      link: "https://github.com/sebastianibar/NOMBRE-REPO-VOTACION",
+      link: "https://github.com/sebastianibar/sistema-votacion-unison",
       skills: ["PHP", "MySQL", "Bootstrap", "Chart.js"],
     },
     {
       name: "Punto de Venta PollosTech",
       description:
         "Aplicación de escritorio para administrar un negocio de pollos: inicio de sesión, gestión de personal, productos, clientes y proveedores, ventas y compras con inventario automático, y dashboard de pedidos. Proyecto en equipo.",
-      link: "https://github.com/sebastianibar/NOMBRE-REPO-POS",
+      link: "https://github.com/sebastianibar/pollos-tech",
       skills: ["Java", "JavaFX", "PostgreSQL"],
     },
     {
       name: "API REST de Biblioteca",
       description:
         "Aplicación web para registrar, consultar, editar y eliminar autores y libros. Backend en Flask con SQLite (dos tablas relacionadas) y frontend en HTML, CSS y JavaScript que consume la API con fetch.",
-      link: "https://github.com/sebastianibar/NOMBRE-REPO-BIBLIOTECA",
+      link: "https://github.com/sebastianibar/api-rest-biblioteca
+        ",
       skills: ["Python", "Flask", "SQLite", "JavaScript"],
     },
     {
       name: "Calculadora de Sistemas de Coordenadas",
       description:
         "Calculadora de consola que convierte puntos entre sistemas de coordenadas 2D (cartesiano y polar) y 3D (rectangular, cilíndrico y esférico), y calcula la distancia entre dos puntos. Proyecto en equipo.",
-      link: "https://github.com/sebastianibar/NOMBRE-REPO-CALCULADORA",
+      link: "https://github.com/sebastianibar/calculadora-coordenadas",
       skills: ["Java"],
     },
     {
       name: "Generador de Datos de Alumnos (Dummy Data)",
       description:
         "Herramienta web que genera hasta 50,000 registros de alumnos de prueba con matrículas y correos institucionales, y los exporta como SQL (MySQL/MariaDB o PostgreSQL), CSV o JSON.",
-      link: "https://github.com/sebastianibar/NOMBRE-REPO-DUMMY-DATA",
+      link: "https://github.com/sebastianibar/generador-alumnos",
       skills: ["HTML", "CSS", "JavaScript"],
     },
   ],
