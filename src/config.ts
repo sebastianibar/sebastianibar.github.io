@@ -77,6 +77,13 @@ export const siteConfig = {
       link: "https://github.com/sebastianibar/estudio-sitio",
       skills: ["InSSIDer", "WiFiman"],
     },
+     {
+      name: "Heaven's Kitchen: Diseño de Interfaz y Prototipo de Videojuego",
+      description:
+        "Prototipo interactivo en Figma de un videojuego de peleas ambientado en una cocina, donde frutas luchan contra electrodomésticos. Incluye menú con modo normal y hardcore, selección y personalización de personajes, tienda, combate y pantallas de pausa, Game Over. Proyecto en equipo.",
+      link: "https://github.com/sebastianibar/interfaz-juego",
+      skills: ["Figma", "UI/UX"],
+    },
   ],
   education: [
     {
