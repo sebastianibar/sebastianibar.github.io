@@ -1,187 +1,139 @@
-<img width="1943" height="1093" alt="image" src="https://github.com/user-attachments/assets/cc2ff955-17c2-48c7-81c8-479a0f061850" />
+# Portafolio de Sebastian Ibarra Padilla
 
-# DevPortfolio Template
+Portafolio personal de Sebastián Ibarra Padilla, estudiante de Ingeniería en Sistemas de Información en la Universidad de Sonora, con interés en desarrollo de software y redes. Reúne los proyectos de la carrera y los trabajos que no pueden subirse como código, documentados como blogs.
 
-A modern, minimalist portfolio template built with Astro and Tailwind CSS. Perfect for developers looking to showcase their skills, experience, and projects in a clean, professional way.
+🌐 **Sitio en vivo:** [https://sebastianibar.github.io](https://sebastianibar.github.io)
 
-This was completely rebuilt from the ground up from V1. This template was built to be entirely ready to go with a quick config edit (see below) but also provides the ability to easily extend in whatever way you want.
+## Contenido del sitio
 
-This template also comes with `CLAUDE.md` and `.cursor/rules` files for easy integration with your existing AI workflows.
+| Sección | Qué muestra |
+|---|---|
+| **Inicio** | Nombre, puesto al que aspiro, ciudad y datos de contacto (correo, teléfono y GitHub) |
+| **About Me** | Quién soy, qué puedo hacer y mis habilidades, separadas en tecnológicas y sociales |
+| **Projects** | Repositorios de los proyectos de la carrera |
+| **Blog** | Proyectos que no se pueden subir como repositorio de código, explicados paso a paso |
+| **Education** | Mi formación académica |
 
-> **📬 Connect & Share!**  
-> For questions and updates, feel free to reach out on [**X (Twitter)**](https://x.com/rfitzio).  
-> If you've built and published your personal site with this template, I'd love to see it! Send me a DM 🚀
+### Proyectos
 
-## Preview
+| Proyecto | Tecnologías |
+|---|---|
+| [Sistema de Votación en Línea](https://github.com/sebastianibar/sistema-votacion-unison) | PHP, MySQL, Bootstrap, Chart.js |
+| [Punto de Venta PollosTech](https://github.com/sebastianibar/pollos-tech) | Java, JavaFX, PostgreSQL |
+| [API REST de Biblioteca](https://github.com/sebastianibar/api-rest-biblioteca) | Python, Flask, SQLite, JavaScript |
+| [Calculadora de Sistemas de Coordenadas](https://github.com/sebastianibar/calculadora-coordenadas) | Java |
+| [Generador de Datos de Alumnos](https://github.com/sebastianibar/generador-alumnos) | HTML, CSS, JavaScript |
 
-To view a live preview of the site, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+### Blog
 
-## Built With
+Cada entrada incluye: descripción, requerimientos del cliente, cómo se diseñó la solución, cómo se implementó y cuál fue el resultado.
 
-- **[Astro](https://astro.build/)** - Static site generator for modern web apps
-- **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Tabler Icons](https://tabler.io/icons)** - Free and open source icons
-- **TypeScript** - For type-safe configuration
+| Entrada | Herramientas |
+|---|---|
+| [Estudio de Sitio WLAN y Análisis de Cobertura](https://github.com/sebastianibar/estudio-sitio) | InSSIDer, WiFiman |
+| [Heaven's Kitchen: Diseño de Interfaz y Prototipo de Videojuego](https://github.com/sebastianibar/interfaz-juego) | Figma, UI/UX |
 
-## Updating the Template
+## Tecnologías
 
-### Configuration
+- **[Astro](https://astro.build/)**: generador de sitios estáticos
+- **[Tailwind CSS](https://tailwindcss.com/)**: estilos
+- **TypeScript**: configuración del sitio
+- **GitHub Pages** y **GitHub Actions**: publicación automática
 
-The template is designed to be easily customizable through the `src/config.ts` file. This single file controls:
+## Personalización sobre la plantilla
 
-- **Personal Information**: Name, title, description
-- **Accent Color**: Primary color theme (changing this will change the accent color site wide)
-- **Social Links**: Email, LinkedIn, Twitter, GitHub (all optional)
-- **About Section**: Personal bio/description
-- **Skills**: List of technical skills
-- **Projects**: Project showcase with descriptions and links
-- **Experience**: Work history with bullet points
-- **Education**: Educational background and achievements
+Partí de una plantilla de código abierto (ver [Créditos](#créditos)) y le hice estos cambios:
 
-If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely.
+- **Nueva sección Blog** (`Blog.astro`), con la misma estructura de tarjetas que Projects, enlazada desde el menú y ubicada antes de Education.
+- **Habilidades separadas** en tecnológicas y sociales (`skills` y `softSkills` en la configuración).
+- **Portada rediseñada:** quité el saludo inicial y agregué ciudad y teléfono (`location` y `social.phone`).
+- **Contenido en español:** puesto, descripción, proyectos, blogs y educación.
 
-### Example structures
+## Estructura del proyecto
 
-Here's what the config data structure looks like for each section:
-
-#### Basic Information
-```typescript
-name: "Your Name",
-title: "Your Job Title",
-description: "Brief site description",
-accentColor: "#1d4ed8", // Hex color for theme
+```
+sebastianibar.github.io/
+├── .github/workflows/       # Despliegue automático a GitHub Pages
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   ├── About.astro      # Sobre mí y habilidades
+│   │   ├── Blog.astro       # Sección de blogs
+│   │   ├── Education.astro  # Educación
+│   │   ├── Experience.astro # Experiencia (oculta si no hay datos)
+│   │   ├── Footer.astro     # Pie de página
+│   │   ├── Header.astro     # Menú de navegación
+│   │   ├── Hero.astro       # Portada
+│   │   └── Projects.astro   # Proyectos
+│   ├── pages/
+│   │   └── index.astro      # Página principal
+│   ├── styles/
+│   │   └── global.css       # Estilos globales
+│   └── config.ts            # Todo el contenido del sitio
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
-#### Social Links (all optional)
-```typescript
-social: {
-  email: "your-email@example.com",
-  linkedin: "https://linkedin.com/in/yourprofile",
-  twitter: "https://twitter.com/yourprofile", 
-  github: "https://github.com/yourusername",
+## Configuración
+
+Todo el contenido se edita en un solo archivo: `src/config.ts`.
+
+| Campo | Qué controla |
+|---|---|
+| `name`, `title`, `description` | Nombre, puesto y descripción del sitio |
+| `accentColor` | Color principal del sitio |
+| `location` | Ciudad que aparece en la portada |
+| `social` | Correo, teléfono y GitHub |
+| `aboutMe` | Texto de presentación |
+| `skills` y `softSkills` | Habilidades tecnológicas y sociales |
+| `projects` | Tarjetas de la sección Projects |
+| `blog` | Tarjetas de la sección Blog |
+| `education` | Formación académica |
+
+Si se elimina una sección del archivo de configuración, deja de mostrarse en el sitio.
+
+Estructura de una tarjeta (`projects` y `blog` usan la misma):
+
+```ts
+{
+  name: "Nombre del proyecto",
+  description: "Qué hace el proyecto.",
+  link: "https://github.com/sebastianibar/nombre-del-repo",
+  skills: ["Tecnología 1", "Tecnología 2"],
 }
 ```
 
-#### About Section
-```typescript
-aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio."
-```
+## Ejecutar en local
 
-#### Skills
-```typescript
-skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "Docker"]
-```
-
-#### Projects
-```typescript
-projects: [
-  {
-    name: "Project Name",
-    description: "Brief description of what the project does and its impact",
-    link: "https://github.com/yourusername/project",
-    skills: ["React", "Node.js", "AWS"], // Technologies used
-  }
-]
-```
-
-#### Experience
-```typescript
-experience: [
-  {
-    company: "Company Name",
-    title: "Your Job Title",
-    dateRange: "Jan 2022 - Present",
-    bullets: [
-      "Led development of microservices architecture serving 1M+ users",
-      "Reduced API response times by 40% through optimization",
-      "Mentored team of 5 junior developers",
-    ],
-  }
-]
-```
-
-#### Education
-```typescript
-education: [
-  {
-    school: "University Name",
-    degree: "Bachelor of Science in Computer Science",
-    dateRange: "2014 - 2018",
-    achievements: [
-      "Graduated Magna Cum Laude with 3.8 GPA",
-      "Dean's List all semesters",
-      "President of Computer Science Club"
-    ]
-  }
-]
-```
-
-### Icons
-
-The template uses [Tabler Icons](https://tabler.io/icons) for all icons. If you wish to add more icons and have it look consistent with what's already there, you can browse through their extensive icon library.
-
-## Project Structure
-
-```
-devportfolio/
-├── public/
-│   └── favicon.svg          # Site favicon
-├── src/
-│   ├── components/          # Astro components
-│   │   ├── About.astro      # About section
-│   │   ├── Education.astro  # Education section
-│   │   ├── Experience.astro # Work experience section
-│   │   ├── Footer.astro     # Site footer
-│   │   ├── Header.astro     # Navigation header
-│   │   ├── Hero.astro       # Hero/intro section
-│   │   └── Projects.astro   # Projects showcase
-│   ├── pages/
-│   │   └── index.astro      # Main page layout
-│   ├── styles/
-│   │   └── global.css       # Global styles
-│   └── config.ts            # Site configuration
-├── astro.config.mjs         # Astro configuration
-├── package.json             # Project dependencies
-├── tailwind.config.js       # Tailwind configuration
-└── tsconfig.json            # TypeScript configuration
-```
-
-## Local Development
-
-If you'd like to run it locally:
-
-```
-git clone https://github.com/RyanFitzgerald/devportfolio.git
-cd devportfolio
+```bash
+git clone https://github.com/sebastianibar/sebastianibar.github.io.git
+cd sebastianibar.github.io
 npm install
-```
-
-After that, start up the Astro dev server with:
-
-```
 npm run dev
 ```
 
-## Deployment
+El sitio queda disponible en `http://localhost:4321`.
 
-The template can be deployed to any static hosting service easily (and in most cases, completely free). Here are some options:
+## Despliegue
 
-- To deploy with Netlify, [click here](https://docs.astro.build/en/guides/deploy/netlify/).
-- To deploy with Vercel, [click here](https://docs.astro.build/en/guides/deploy/vercel/).
-- To deploy with GitHub Pages, [click here](https://docs.astro.build/en/guides/deploy/github/).
-- To deploy with Cloudflare Pages, [click here](https://docs.astro.build/en/guides/deploy/cloudflare/).
-- To deploy with Render, [click here](https://docs.astro.build/en/guides/deploy/render/).
+El sitio se publica solo con **GitHub Actions**: cada `push` a la rama `master` ejecuta el workflow *Deploy to GitHub Pages*. Para verificar el estado, revisa la pestaña **Actions** del repositorio. En *Settings → Pages*, el origen debe estar en **GitHub Actions**.
 
-Want to deploy somewhere else? Find more guides [here](https://docs.astro.build/en/guides/deploy/).
+## Créditos
 
-## Changelog
+Este portafolio está basado en **DevPortfolio Template**, una plantilla de código abierto creada por **[Ryan Fitzgerald](https://github.com/RyanFitzgerald)**.
 
-To view the changelog, see CHANGELOG.md.
+- Repositorio original: [RyanFitzgerald/devportfolio](https://github.com/RyanFitzgerald/devportfolio)
+- Vista previa de la plantilla: [ryanfitzgerald.github.io/devportfolio](https://ryanfitzgerald.github.io/devportfolio/)
+- Contacto del autor: [@rfitzio en X](https://x.com/rfitzio)
 
-## License
+Agradezco al autor por compartir un diseño limpio y fácil de adaptar. El contenido, los textos y las modificaciones descritas arriba son propios.
 
-This project is fully and completely MIT. See LICENSE.md.
+## Licencia
 
-## Questions?
+La plantilla original se distribuye bajo la **licencia MIT**, y este proyecto la conserva. Consulta el archivo [LICENSE.md](LICENSE.md) para ver el texto completo.
 
-Feel free to reach out on [X (Twitter)](https://x.com/rfitzio) if you have any questions or need help.
+## Autor
+
+**Sebastián Ibarra Padilla** · [GitHub](https://github.com/sebastianibar)
