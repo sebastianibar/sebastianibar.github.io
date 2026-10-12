@@ -3,8 +3,10 @@ export const siteConfig = {
   title: "Aspirante a Desarrollador de Software y Redes | Estudiante de Ingeniería en Sistemas de Información",
   description: "Portafolio de proyectos de la carrera - Universidad de Sonora",
   accentColor: "#1d4ed8",
+  location: "Hermosillo, Sonora",
   social: {
     email: "sebasip181@gmail.com",
+    phone: "662 364 3858",
     github: "https://github.com/sebastianibar",
   },
   aboutMe:
